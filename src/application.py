@@ -28,8 +28,11 @@ def get_objects(cursor):
 
 # Connect to database
 with psycopg2.connect(
-    database='books', user='postgres',
-    password='246432', host='localhost', port='5432'
+    database=os.environ.get('DB_NAME', 'books'),
+    user=os.environ.get('DB_USER', 'postgres'),
+    password=os.environ.get('DB_PASSWORD', ''),
+    host=os.environ.get('DB_HOST', 'localhost'),
+    port=os.environ.get('DB_PORT', '5432')
 ) as conn:
 
     # Define view functions
