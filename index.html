@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Review Web App — Showcase</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    header h1 { font-size: 1.4rem; font-weight: 600; }
+    header .subtitle { font-size: 0.85rem; color: #8b949e; margin-top: 2px; }
+    .header-links { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 8px 18px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; cursor: pointer; border: none; transition: opacity 0.15s; text-decoration: none; }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #e6edf3; border: 1px solid #30363d; }
+    main { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .hero { text-align: center; margin-bottom: 56px; }
+    .hero h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+    .hero p { font-size: 1.05rem; color: #8b949e; max-width: 640px; margin: 0 auto 28px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 20px; }
+    .badge { background: #161b22; border: 1px solid #30363d; border-radius: 20px; padding: 4px 12px; font-size: 0.78rem; color: #8b949e; }
+    section { margin-bottom: 56px; }
+    section h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+    .video-container { background: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; aspect-ratio: 16/9; }
+    .video-container video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .feature-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+    .feature-card .icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .feature-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+    .feature-card p { font-size: 0.85rem; color: #8b949e; }
+    .schema-block { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #79c0ff; overflow-x: auto; }
+    .schema-block .comment { color: #484f58; }
+    .api-block { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+    .api-block .endpoint { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85rem; color: #79c0ff; margin-bottom: 12px; }
+    .api-block pre { background: #0d1117; border-radius: 6px; padding: 14px; font-size: 0.82rem; color: #a5d6ff; overflow-x: auto; }
+    footer { text-align: center; padding: 32px; border-top: 1px solid #21262d; color: #484f58; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Book Review Web Application</h1>
+    <div class="subtitle">Flask · PostgreSQL · Google Books API · Bootstrap 5</div>
+  </div>
+  <div class="header-links">
+    <a class="btn btn-secondary" href="https://github.com/Halkhoori2000/Book-Review-Web-Application" target="_blank">GitHub</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <h2>Full-Stack Book Review Platform</h2>
+    <p>Search 5,000 books by title, author, or ISBN. Write star-rated reviews. Get live ratings from the Google Books API. Access book stats via a JSON REST endpoint.</p>
+    <div class="badge-row">
+      <span class="badge">Python</span>
+      <span class="badge">Flask</span>
+      <span class="badge">PostgreSQL</span>
+      <span class="badge">psycopg2</span>
+      <span class="badge">Google Books API</span>
+      <span class="badge">Flask-Session</span>
+      <span class="badge">Bootstrap 5</span>
+      <span class="badge">5,000-book CSV seed</span>
+    </div>
+  </div>
+
+  <section>
+    <h3>Demo Walkthrough</h3>
+    <div class="video-container">
+      <video controls>
+        <source src="demo/walkthrough.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section>
+    <h3>What It Does</h3>
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon">&#128269;</div>
+        <h4>Full-Text Book Search</h4>
+        <p>Search 5,000 books by any combination of title, author, or ISBN using SQL LIKE queries with partial matching.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#11088;</div>
+        <h4>Star Ratings & Reviews</h4>
+        <p>Authenticated users post one review and a 1–5 score per book. All reviews are aggregated on the book's detail page.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#127760;</div>
+        <h4>Google Books Enrichment</h4>
+        <p>Each book page fetches live average rating and ratings count from the Google Books API and displays it alongside local reviews.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128203;</div>
+        <h4>JSON REST API</h4>
+        <p>GET /api/&lt;isbn&gt; returns book metadata plus review count and average score — consumable by any external app or script.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Database Schema</h3>
+    <div class="schema-block">
+<pre><span class="comment">-- Three tables with FK constraints</span>
+Books    (BookID, ISBN, Title, Author, Year, Created, Modified)
+Users    (UserID, Username, Password, Created, Modified)
+Reviews  (ReviewID, PostedBy → Users, ReviewOf → Books, Review, Score, Created)
+
+<span class="comment">-- One review per user per book enforced at query level</span>
+<span class="comment">-- 5,000 books seeded from books.csv via db/import.py</span></pre>
+    </div>
+  </section>
+
+  <section>
+    <h3>API Endpoint</h3>
+    <div class="api-block">
+      <div class="endpoint">GET /api/&lt;isbn&gt;</div>
+      <pre>{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "year": 1925,
+  "isbn": "0743273567",
+  "review_count": 12,
+  "average_score": 4.2
+}</pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Built by <a href="https://github.com/Halkhoori2000" target="_blank">Hamdan Alkhoori</a> &nbsp;·&nbsp; The Pennsylvania State University</p>
+</footer>
+
+</body>
+</html>
