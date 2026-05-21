@@ -17,7 +17,7 @@
     .btn:hover { opacity: 0.85; text-decoration: none; }
     .btn-primary { background: #238636; color: #fff; }
     .btn-secondary { background: #21262d; color: #e6edf3; border: 1px solid #30363d; }
-    main { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    main { max-width: 960px; margin: 0 auto; padding: 48px 24px; }
     .hero { text-align: center; margin-bottom: 56px; }
     .hero h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
     .hero p { font-size: 1.05rem; color: #8b949e; max-width: 640px; margin: 0 auto 28px; }
@@ -25,8 +25,6 @@
     .badge { background: #161b22; border: 1px solid #30363d; border-radius: 20px; padding: 4px 12px; font-size: 0.78rem; color: #8b949e; }
     section { margin-bottom: 56px; }
     section h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
-    .video-container { background: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; aspect-ratio: 16/9; }
-    .video-container video { width: 100%; height: 100%; object-fit: cover; display: block; }
     .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
     .feature-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
     .feature-card .icon { font-size: 1.5rem; margin-bottom: 10px; }
@@ -38,6 +36,53 @@
     .api-block .endpoint { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85rem; color: #79c0ff; margin-bottom: 12px; }
     .api-block pre { background: #0d1117; border-radius: 6px; padding: 14px; font-size: 0.82rem; color: #a5d6ff; overflow-x: auto; }
     footer { text-align: center; padding: 32px; border-top: 1px solid #21262d; color: #484f58; font-size: 0.85rem; }
+
+    /* App screen mockups */
+    .screens { display: flex; flex-direction: column; gap: 24px; }
+    .screen { background: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; }
+    .screen-bar { background: #21262d; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #30363d; }
+    .screen-bar .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-r { background: #f85149; }
+    .dot-y { background: #d29922; }
+    .dot-g { background: #3fb950; }
+    .screen-bar .url { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #8b949e; margin-left: 10px; }
+    .screen-label { font-size: 0.7rem; color: #484f58; text-transform: uppercase; letter-spacing: 0.06em; margin-left: auto; }
+    .screen-body { padding: 24px; }
+
+    /* Search screen */
+    .search-bar-mock { display: flex; gap: 8px; margin-bottom: 20px; }
+    .search-bar-mock input { flex: 1; background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 8px 12px; color: #e6edf3; font-size: 0.9rem; outline: none; font-family: inherit; }
+    .search-bar-mock button { background: #238636; color: #fff; border: none; border-radius: 6px; padding: 8px 16px; font-size: 0.85rem; cursor: default; }
+    .result-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #21262d; }
+    .result-row:last-child { border-bottom: none; }
+    .result-title { font-size: 0.9rem; font-weight: 600; color: #58a6ff; }
+    .result-meta { font-size: 0.8rem; color: #8b949e; margin-top: 2px; }
+    .result-score { font-size: 0.85rem; color: #f0a040; white-space: nowrap; margin-left: 16px; }
+
+    /* Book detail screen */
+    .book-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 600px) { .book-detail { grid-template-columns: 1fr; } }
+    .book-info h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+    .book-info .author { color: #8b949e; font-size: 0.88rem; margin-bottom: 12px; }
+    .stat-row { display: flex; gap: 20px; margin-bottom: 14px; }
+    .stat-box { background: #0d1117; border: 1px solid #21262d; border-radius: 6px; padding: 10px 16px; text-align: center; }
+    .stat-box .val { font-size: 1.3rem; font-weight: 700; color: #f0a040; }
+    .stat-box .lbl { font-size: 0.72rem; color: #484f58; margin-top: 2px; }
+    .gbooks-badge { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 8px 12px; font-size: 0.8rem; color: #8b949e; margin-bottom: 14px; }
+    .gbooks-badge span { color: #58a6ff; }
+    .review-form { background: #0d1117; border: 1px solid #21262d; border-radius: 8px; padding: 14px; }
+    .review-form .form-label { font-size: 0.8rem; color: #8b949e; margin-bottom: 6px; }
+    .star-row { display: flex; gap: 4px; margin-bottom: 10px; }
+    .star { color: #f0a040; font-size: 1.1rem; }
+    .star-empty { color: #30363d; font-size: 1.1rem; }
+    .review-textarea { width: 100%; background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 8px 10px; color: #e6edf3; font-size: 0.82rem; font-family: inherit; resize: none; outline: none; }
+    .submit-btn { margin-top: 10px; background: #238636; color: #fff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 0.82rem; cursor: default; }
+
+    .reviews-panel h5 { font-size: 0.85rem; font-weight: 600; color: #8b949e; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .review-item { background: #0d1117; border: 1px solid #21262d; border-radius: 6px; padding: 12px; margin-bottom: 8px; }
+    .review-item .rv-user { font-size: 0.8rem; font-weight: 600; color: #58a6ff; }
+    .review-item .rv-stars { color: #f0a040; font-size: 0.8rem; margin: 2px 0 4px; }
+    .review-item .rv-text { font-size: 0.82rem; color: #8b949e; }
   </style>
 </head>
 <body>
@@ -70,11 +115,95 @@
   </div>
 
   <section>
-    <h3>Demo Walkthrough</h3>
-    <div class="video-container">
-      <video controls preload="metadata" style="width:100%;height:100%;display:block;">
-        <source src="demo/walkthrough.mp4" type="video/mp4">
-      </video>
+    <h3>App Screens</h3>
+    <div class="screens">
+
+      <!-- Search Screen -->
+      <div class="screen">
+        <div class="screen-bar">
+          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+          <div class="url">localhost:5000/search</div>
+          <div class="screen-label">Search Page</div>
+        </div>
+        <div class="screen-body">
+          <div class="search-bar-mock">
+            <input type="text" value="fitzgerald" readonly />
+            <button>Search</button>
+          </div>
+          <div class="result-row">
+            <div>
+              <div class="result-title">The Great Gatsby</div>
+              <div class="result-meta">F. Scott Fitzgerald · ISBN 0743273567 · 1925</div>
+            </div>
+            <div class="result-score">★ 4.2 &nbsp;(12 reviews)</div>
+          </div>
+          <div class="result-row">
+            <div>
+              <div class="result-title">Tender Is the Night</div>
+              <div class="result-meta">F. Scott Fitzgerald · ISBN 0684801469 · 1934</div>
+            </div>
+            <div class="result-score">★ 3.8 &nbsp;(7 reviews)</div>
+          </div>
+          <div class="result-row">
+            <div>
+              <div class="result-title">This Side of Paradise</div>
+              <div class="result-meta">F. Scott Fitzgerald · ISBN 0486285138 · 1920</div>
+            </div>
+            <div class="result-score">★ 3.5 &nbsp;(4 reviews)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book Detail Screen -->
+      <div class="screen">
+        <div class="screen-bar">
+          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+          <div class="url">localhost:5000/book/0743273567</div>
+          <div class="screen-label">Book Detail Page</div>
+        </div>
+        <div class="screen-body">
+          <div class="book-detail">
+            <div>
+              <div class="book-info">
+                <h4>The Great Gatsby</h4>
+                <div class="author">F. Scott Fitzgerald · 1925</div>
+                <div class="stat-row">
+                  <div class="stat-box"><div class="val">4.2</div><div class="lbl">Avg Score</div></div>
+                  <div class="stat-box"><div class="val">12</div><div class="lbl">Reviews</div></div>
+                </div>
+                <div class="gbooks-badge">Google Books: <span>★ 3.9</span> &nbsp;·&nbsp; <span>2,841 ratings</span></div>
+              </div>
+              <div class="review-form">
+                <div class="form-label">Your Review</div>
+                <div class="star-row">
+                  <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-empty">★</span>
+                </div>
+                <textarea class="review-textarea" rows="3" readonly>A masterpiece of the Jazz Age — Fitzgerald's prose is unmatched.</textarea>
+                <br/><button class="submit-btn">Submit Review</button>
+              </div>
+            </div>
+            <div class="reviews-panel">
+              <h5>All Reviews</h5>
+              <div class="review-item">
+                <div class="rv-user">alice_reads</div>
+                <div class="rv-stars">★★★★★</div>
+                <div class="rv-text">Beautifully written. A timeless American classic.</div>
+              </div>
+              <div class="review-item">
+                <div class="rv-user">bookworm92</div>
+                <div class="rv-stars">★★★★☆</div>
+                <div class="rv-text">The symbolism is rich but the characters feel distant.</div>
+              </div>
+              <div class="review-item">
+                <div class="rv-user">mj_reader</div>
+                <div class="rv-stars">★★★★☆</div>
+                <div class="rv-text">Short but dense — worth re-reading every few years.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
