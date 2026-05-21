@@ -1,5 +1,7 @@
 # Book Review Web Application — Flask, PostgreSQL, Google Books API
 
+**[Live Showcase →](https://halkhoori2000.github.io/Book-Review-Web-Application/)**
+
 A full-stack book review platform where users register, search a database of 5,000 books by title, author, or ISBN, write star-rated reviews, and access book metadata enriched from the Google Books API. Each user can post one review per book. A JSON API endpoint exposes book data and aggregate review statistics for external consumption.
 
 Built with Flask on the backend, PostgreSQL as the relational store, and Bootstrap 5 for the UI. HTML is generated directly in Python via f-string view functions — no Jinja templates. Sessions are managed server-side with Flask-Session. The database schema is three tables (Books, Users, Reviews) with FK constraints, seeded from a 5,000-row CSV via a standalone import script.
