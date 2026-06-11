@@ -1,5 +1,7 @@
 # Book Review Web Application — Flask, PostgreSQL, Google Books API
 
+*CMPSC 297 — Special Topics · The Pennsylvania State University · 2023*
+
 **[Live Showcase →](https://halkhoori2000.github.io/Book-Review-Web-Application/)**
 
 A full-stack book review platform where users register, search a database of 5,000 books by title, author, or ISBN, write star-rated reviews, and access book metadata enriched from the Google Books API. Each user can post one review per book. A JSON API endpoint exposes book data and aggregate review statistics for external consumption.
