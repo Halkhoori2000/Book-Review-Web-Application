@@ -91,4 +91,5 @@ GET /api/<isbn>
 
 ## Course
 
-The Pennsylvania State University
+CMPSC 297 — Special Topics  
+The Pennsylvania State University · 2023
